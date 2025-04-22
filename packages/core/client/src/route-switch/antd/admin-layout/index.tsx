@@ -516,6 +516,7 @@ const collapsedButtonRender = (collapsed, dom) => {
 
 const headerContextValue = { inHeader: true };
 const headerRender = (props: HeaderViewProps, defaultDom: React.ReactNode) => {
+  //此处可以屏蔽掉默认的头部
   return <headerContext.Provider value={headerContextValue}>{defaultDom}</headerContext.Provider>;
 };
 
@@ -581,10 +582,12 @@ export const InternalAdminLayout = () => {
         className={resetStyle}
         location={location}
         route={route}
+        //右侧按钮区
         actionsRender={actionsRender}
         logo={<NocoBaseLogo />}
         title={''}
-        layout="mix"
+        //混合布局改成侧边布局
+        layout="side"
         splitMenus
         token={layoutToken}
         headerRender={headerRender}

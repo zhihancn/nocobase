@@ -17,6 +17,7 @@ coverage
 .env.test
 docs-dist/
 .npmrc
+.nvmrc
 dist/
 docker/**/storage
 cache/diskstore-*

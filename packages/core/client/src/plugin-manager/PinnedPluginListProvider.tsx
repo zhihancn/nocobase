@@ -96,6 +96,7 @@ export const PinnedPluginList = React.memo(() => {
   const ctx = useContext(PinnedPluginListContext);
   const { components } = useContext(SchemaOptionsContext);
 
+  //index 目录操作按钮
   return (
     <div className={pinnedPluginListClassName}>
       {Object.keys(ctx.items)
